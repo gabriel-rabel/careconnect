@@ -1,9 +1,8 @@
-export default function HomePage() {
+export default function ItemForm() {
   return (
-    <div className="flex flex-col items-center">
-      <h1>teste de titulo</h1>
-      <form className="flex flex-col shadow rounded-md md:min-w-[600px] items-start">
-        <label>Tipo do Equipamento:</label>
+    <div>
+      <form className="">
+        <label>Empréstimo ou Doação?</label>
         <select name="service">
           <option value="bed">Cama</option>
           <option value="chair">Cadeira</option>
@@ -17,7 +16,7 @@ export default function HomePage() {
         <label htmlFor="used">Usado</label>
         <label>Título do Anúncio:</label>
         <input type="text" />
-        <label>Descrição do Equipamento:</label>
+        <label>Descrição e detalhes do Equipamento:</label>
         <textarea type="text" />
         <label>Foto do Equipamento:</label>
         <input type="url" />
