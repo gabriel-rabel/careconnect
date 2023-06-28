@@ -1,4 +1,4 @@
-#CareConnect
+##CareConnect
 Bem-vindo(a) ao CareConnect, um projeto desenvolvido em React que visa promover a solidariedade e o compartilhamento de itens de saúde entre as pessoas. O TrocaSaúde é uma plataforma online onde os usuários podem postar e emprestar itens de saúde, como cadeiras de rodas, muletas, andadores e outros equipamentos similares, para aqueles que estão necessitados.
 
 #Objetivo
