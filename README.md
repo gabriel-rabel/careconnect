@@ -18,3 +18,13 @@ Se você deseja contribuir para o desenvolvimento do TrocaSaúde, sinta-se à vo
 
 #Licença
 O TrocaSaúde é um software de código aberto licenciado sob a MIT License.
+
+#Bibliotecas
+
+@heroicons/react 
+@headlessui/react  
+@react-hot-toast
+@react-router-dom
+@axios
+@route
+@npm tailwindcss
