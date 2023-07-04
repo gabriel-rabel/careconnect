@@ -22,10 +22,10 @@ export default function ItemList() {
   return (
     <div>
       <h1> Equipamentos Disponíveis</h1>
-      <div className="flex grid-cols-3 gap-4 p-6">
+      <div className="grid justify-center md:grid-cols-5 gap-4">
         {loaded &&
           items.map((item) => (
-            <div className="flex flex-col shadow rounded-sm p-4" key={item._id}>
+            <div className="w-full max-w-sm rounded-b-lg shadow border-t-4 border-blue-600" key={item._id}>
               <h3>{item.title}</h3>
               <img className="flex max-h-40" src={item.img} />
               <p>{item.availability}</p>
@@ -34,7 +34,6 @@ export default function ItemList() {
                 className="bg-primary rounded-md p-2  justify-self-stretch text-white"
                 type="submit"
               >
-                
                 Ver Detalhes
               </button>
               </Link>

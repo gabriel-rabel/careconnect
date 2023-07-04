@@ -106,9 +106,9 @@ export default function ItemDetailPage() {
           <TrashIcon className="h-6 w-6" title="Deletar" />
         </button>
       </div>
-      <div className="flex flex-col gap-4 p-6">
+      <div className="flex flex-col gap-4 p-6 items-center rounded-sm">
         <h1>{item.title}</h1>
-        <img className="" src={item.img} />
+        <img className="border max-w-[400px]" src={item.img} />
         <p>{item.description}</p>
         <p>
           Tipo: {item.type} - {item.status}
@@ -124,44 +124,44 @@ export default function ItemDetailPage() {
           <h1 className="flex text-3xl">Edição de cadastro</h1>
           <form
             onSubmit={handleSubmit}
-            className="flex p-8 flex-col gap-3 shadow rounded-sm md:min-w-[600px] items-start"
+            className="flex m-5 p-5 flex-col gap-3 shadow rounded-sm md:min-w-[600px] items-start"
           >
-            <label>Título do Anúncio:</label>
+            <label className="block text-sm font-semibold leading-6 text-gray-900">Título do Anúncio:</label>
             <input
               onChange={handleChange}
-              className="shadow-md bg-slate-100 border-none rounded-sm w-full p-1"
+              className="-mt-3 block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               type="text"
               name="title"
               value={itemForm.title}
             />
 
             <div className="flex gap-3">
-              <label>Estado do Equipamento: </label>
+              <label className="block text-sm font-semibold leading-6 text-gray-900">Desejo disponibilizar como: </label>
               <input
                 onChange={handleChange}
-                className="shadow"
+                className=""
                 type="radio"
                 name="type"
-                value="DONATION"
-                checked={itemForm.type === "DONATION"}
+                value="Doação"
+                checked={itemForm.type === "Doação"}
               />
-              <label className="shadow" htmlFor="new">
+              <label className="block text-sm font-semibold leading-6 text-gray-900" htmlFor="new">
                 Doação
               </label>
               <input
                 onChange={handleChange}
-                className="shadow"
+                className=""
                 type="radio"
                 name="type"
-                value="LOAN"
-                checked={itemForm.type === "LOAN"}
+                value="Empréstimo"
+                checked={itemForm.type === "Empréstimo"}
               />
-              <label className="shadow" htmlFor="new">
+              <label className="block text-sm font-semibold leading-6 text-gray-900" htmlFor="new">
                 Empréstimo
               </label>
             </div>
 
-            <div className="flex gap-3">
+            <div className="flex gap-3 text-sm font-semibold leading-6 text-gray-900">
               <label>Tipo do Equipamento:</label>
               <select
                 onChange={handleChange}
@@ -174,65 +174,64 @@ export default function ItemDetailPage() {
                 <option value="Andador">Andador</option>
                 <option value="Equipamento">Equipamento</option>
               </select>
-            </div>
-            <div className="flex gap-3">
+           
               <input
                 onChange={handleChange}
-                className="shadow"
+                className=""
                 type="radio"
                 id="new"
                 name="status"
-                value="NEW"
-                checked={itemForm.status === "NEW"}
+                value="Novo"
+                checked={itemForm.status === "Novo"}
               />
-              <label className="shadow" htmlFor="new">
+              <label className="block text-sm font-semibold leading-6 text-gray-900" htmlFor="new">
                 Novo
               </label>
 
               <input
                 onChange={handleChange}
-                className="shadow"
+                className=""
                 type="radio"
                 id="used"
                 name="status"
-                value="USED"
-                checked={itemForm.status === "USED"}
+                value="Usado"
+                checked={itemForm.status === "Usado"}
               />
-              <label className="shadow" htmlFor="used">
+              <label className="block text-sm font-semibold leading-6 text-gray-900" htmlFor="used">
                 Usado
               </label>
             </div>
 
-            <label>Descrição do Equipamento:</label>
+            <label className="block text-sm font-semibold leading-6 text-gray-900">Descrição do Equipamento:</label>
             <textarea
               onChange={handleChange}
-              className="shadow-md border rounded-sm"
+              className=" -mt-3 block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               rows="5"
               type="text"
               name="description"
               value={itemForm.description}
             />
-            <label>Foto do Equipamento:</label>
+            <label className="block text-sm font-semibold leading-6 text-gray-900">Foto do Equipamento: <span className="font-extralight text-gray-500">(inserir link)</span></label>
             <input
               onChange={handleChange}
-              className="shadow-md border rounded-sm"
+              className="-mt-3 block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               type="url"
               name="img"
               value={itemForm.img}
             />
-            <label>Telefone:</label>
+            <label className="block text-sm font-semibold leading-6 text-gray-900">Telefone:</label>
             <input
               onChange={handleChange}
-              className="shadow-md border rounded-sm"
+              className="-mt-3 block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               type="phone"
               name="phone"
               value={itemForm.phone}
             />
             <button
-              className="flex bg-primary border-none hover:bg-blue-300 rounded-md p-2 shadow-md"
+              className="flex text-white bg-primary border-none hover:bg-blue-300 rounded-md p-2 shadow-md"
               type="submit"
             >
-              Salvar edição
+              Salvar
             </button>
           </form>
         </div>
