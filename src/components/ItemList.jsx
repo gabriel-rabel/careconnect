@@ -25,7 +25,7 @@ export default function ItemList() {
       <div className="grid justify-center md:grid-cols-5 gap-4">
         {loaded &&
           items.map((item) => (
-            <div className="w-full max-w-sm rounded-b-lg shadow border-t-4 border-blue-600" key={item._id}>
+            <div className="w-full max-w-sm rounded-b-lg shadow border-t-4 border-blue-600 w" key={item._id}>
               <h3>{item.title}</h3>
               <img className="flex max-h-40" src={item.img} />
               <p>{item.availability}</p>

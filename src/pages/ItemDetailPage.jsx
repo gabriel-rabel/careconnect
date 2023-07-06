@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
-import  toast  from "react-hot-toast"
-import { TrashIcon } from '@heroicons/react/24/outline';
-import { PencilSquareIcon } from '@heroicons/react/24/outline';
+import toast from "react-hot-toast";
+import { TrashIcon } from "@heroicons/react/24/outline";
+import { PencilSquareIcon } from "@heroicons/react/24/outline";
 
 export default function ItemDetailPage() {
   const [item, setItem] = useState({});
@@ -75,14 +75,12 @@ export default function ItemDetailPage() {
         itemForm
       );
       console.log(response.data);
-      toast.success("Item editado com sucesso!")
+      toast.success("Item editado com sucesso!");
       setShowForm(false);
       setReload(!reload);
     } catch (error) {
       console.error(error);
-      toast.error("Falha ao editar o item!")
-      
-
+      toast.error("Falha ao editar o item!");
     }
   }
 
@@ -96,13 +94,11 @@ export default function ItemDetailPage() {
         onClick={() => setShowForm(!showForm)}
         className="flex w-full justify-end p-6 gap-3 items-end"
       >
-        <button >
-        <PencilSquareIcon className="h-6 w-6" title="Editar" />
+        <button>
+          <PencilSquareIcon className="h-6 w-6" title="Editar" />
         </button>
-        
-        <button
-          onClick={handleDelete}
-        >
+
+        <button onClick={handleDelete}>
           <TrashIcon className="h-6 w-6" title="Deletar" />
         </button>
       </div>
@@ -126,7 +122,9 @@ export default function ItemDetailPage() {
             onSubmit={handleSubmit}
             className="flex m-5 p-5 flex-col gap-3 shadow rounded-sm md:min-w-[600px] items-start"
           >
-            <label className="block text-sm font-semibold leading-6 text-gray-900">Título do Anúncio:</label>
+            <label className="block text-sm font-semibold leading-6 text-gray-900">
+              Título do Anúncio:
+            </label>
             <input
               onChange={handleChange}
               className="-mt-3 block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -136,7 +134,9 @@ export default function ItemDetailPage() {
             />
 
             <div className="flex gap-3">
-              <label className="block text-sm font-semibold leading-6 text-gray-900">Desejo disponibilizar como: </label>
+              <label className="block text-sm font-semibold leading-6 text-gray-900">
+                Desejo disponibilizar como:{" "}
+              </label>
               <input
                 onChange={handleChange}
                 className=""
@@ -145,7 +145,10 @@ export default function ItemDetailPage() {
                 value="Doação"
                 checked={itemForm.type === "Doação"}
               />
-              <label className="block text-sm font-semibold leading-6 text-gray-900" htmlFor="new">
+              <label
+                className="block text-sm font-semibold leading-6 text-gray-900"
+                htmlFor="new"
+              >
                 Doação
               </label>
               <input
@@ -156,7 +159,10 @@ export default function ItemDetailPage() {
                 value="Empréstimo"
                 checked={itemForm.type === "Empréstimo"}
               />
-              <label className="block text-sm font-semibold leading-6 text-gray-900" htmlFor="new">
+              <label
+                className="block text-sm font-semibold leading-6 text-gray-900"
+                htmlFor="new"
+              >
                 Empréstimo
               </label>
             </div>
@@ -174,7 +180,7 @@ export default function ItemDetailPage() {
                 <option value="Andador">Andador</option>
                 <option value="Equipamento">Equipamento</option>
               </select>
-           
+
               <input
                 onChange={handleChange}
                 className=""
@@ -184,7 +190,10 @@ export default function ItemDetailPage() {
                 value="Novo"
                 checked={itemForm.status === "Novo"}
               />
-              <label className="block text-sm font-semibold leading-6 text-gray-900" htmlFor="new">
+              <label
+                className="block text-sm font-semibold leading-6 text-gray-900"
+                htmlFor="new"
+              >
                 Novo
               </label>
 
@@ -197,12 +206,17 @@ export default function ItemDetailPage() {
                 value="Usado"
                 checked={itemForm.status === "Usado"}
               />
-              <label className="block text-sm font-semibold leading-6 text-gray-900" htmlFor="used">
+              <label
+                className="block text-sm font-semibold leading-6 text-gray-900"
+                htmlFor="used"
+              >
                 Usado
               </label>
             </div>
 
-            <label className="block text-sm font-semibold leading-6 text-gray-900">Descrição do Equipamento:</label>
+            <label className="block text-sm font-semibold leading-6 text-gray-900">
+              Descrição do Equipamento:
+            </label>
             <textarea
               onChange={handleChange}
               className=" -mt-3 block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -211,7 +225,12 @@ export default function ItemDetailPage() {
               name="description"
               value={itemForm.description}
             />
-            <label className="block text-sm font-semibold leading-6 text-gray-900">Foto do Equipamento: <span className="font-extralight text-gray-500">(inserir link)</span></label>
+            <label className="block text-sm font-semibold leading-6 text-gray-900">
+              Foto do Equipamento:{" "}
+              <span className="font-extralight text-gray-500">
+                (inserir link)
+              </span>
+            </label>
             <input
               onChange={handleChange}
               className="-mt-3 block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -219,7 +238,9 @@ export default function ItemDetailPage() {
               name="img"
               value={itemForm.img}
             />
-            <label className="block text-sm font-semibold leading-6 text-gray-900">Telefone:</label>
+            <label className="block text-sm font-semibold leading-6 text-gray-900">
+              Telefone:
+            </label>
             <input
               onChange={handleChange}
               className="-mt-3 block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -228,7 +249,7 @@ export default function ItemDetailPage() {
               value={itemForm.phone}
             />
             <button
-              className="flex text-white bg-primary border-none hover:bg-blue-300 rounded-md p-2 shadow-md"
+              className="flex text-white bg-primary border-none hover:bg-sky-300 rounded-md p-2 shadow-md"
               type="submit"
             >
               Salvar

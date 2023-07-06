@@ -1,5 +1,6 @@
 import ItemListHome from "../components/ItemListHome";
 import doctorImg from "../assets/doctor-woman.png";
+import menImg from "../assets/men.png";
 import bg from "../assets/bg_blue_n.png";
 
 export default function HomePage() {
@@ -54,27 +55,60 @@ export default function HomePage() {
         </div>
       </section>
       <section>
-        <h3 className="font-bold text-gray-600 text-3xl">Ajudar pessoas é a nossa missão</h3>
-        <h5 className="font-thin text-sm">O pouco que temos, podemos oferecer</h5>
-        <div className="flex bg-gray-200">
-          <div className="flex w-2/4">
-        imagem
+        <div className="md:p-10">
+          <h4 className="text-blue-700 font-bold ">Somos muitos</h4>
+          <h2 className="font-bold text-gray-600 text-4xl">Em números</h2>
+        </div>
+        <div className="grid justify-center md:grid-cols-3 gap-5 md:mx-20">
+          <div className="flex flex-col  p-3 justify-center w-full max-w-sm min-h-[200px] rounded-b-lg shadow border-t-4 border-blue-600">
+            <div>
+              <p className="font-bold text-5xl">1350+</p>
+              </div>
+              <div>
+              <p>Equipamentos</p>
+              <p className="font-thin">Fornecidos</p>
+            </div>
           </div>
-          <div className="flex flex-col w-2/4">
-          <p>
-            Ao compartilhar o que temos, podemos aliviar o sofrimento de pessoas
-            lutando contra doenças, idosos e indivíduos em recuperação. Cada
-            pequeno gesto de bondade importa e o impacto que você pode ter na
-            vida de alguém é imensurável.
-          </p>
-          <p>
-            Convidamos você a se juntar a nós nessa jornada de solidariedade. Ao
-            doar ou emprestar materiais médicos, você faz a diferença real na
-            vida de alguém. Vamos criar uma cultura de apoio mútuo, cuidando uns
-            dos outros e valorizando a dignidade e o bem-estar de todos. Juntos,
-            podemos trazer esperança, alívio e sorrisos para quem mais precisa.
-            Junte-se a nós hoje mesmo e faça parte dessa mudança positiva!
-          </p>
+          <div className="flex flex-col  p-3 justify-center w-full max-w-sm min-h-[200px] rounded-b-lg shadow border-t-4 border-blue-600">
+          <div>
+              <p className="font-bold text-5xl">1700+</p>
+              </div>
+              <div>
+              <p>Pessoas</p>
+              <p className="font-thin">Cadastradas</p>
+            </div>
+          </div>
+          <div className="flex flex-col  p-3 justify-center w-full max-w-sm min-h-[200px] rounded-b-lg shadow border-t-4 border-blue-600">
+          <div>
+              <p className="font-bold text-5xl">95%</p>
+              </div>
+              <div>
+              <p>Satisfação</p>
+              <p className="font-thin">Entre os Clientes</p>
+            </div>
+          </div>
+        </div>
+        <div className="md:p-10 border shadow-lg m-6 rounded-md">
+          <h3 className="font-bold mt-3 text-gray-600 text-3xl">
+            Ajudar pessoas é a nossa missão
+          </h3>
+          <h5 className="font-thin text-sm">
+            O pouco que temos, podemos oferecer...
+          </h5>
+          <div className="flex flex-col justify-center md:flex-row">
+            <div className="flex w-2/5">
+              <img className="" src={menImg} />
+            </div>
+
+            <div className="flex flex-col w-2/4 justify-center gap-4">
+              <p className="font-extralight text-2xl">
+                "Ao compartilhar o que temos, podemos aliviar o sofrimento de
+                pessoas lutando contra doenças, idosos e indivíduos em
+                recuperação. Cada pequeno gesto de bondade importa e o impacto
+                que você pode ter na vida de alguém é imensurável."
+              </p>
+              <p className="font-thin italic">Mr.Rabel - Fundador</p>
+            </div>
           </div>
         </div>
       </section>

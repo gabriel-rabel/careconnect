@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import  toast  from "react-hot-toast"
+import toast from "react-hot-toast";
 
 export default function ItemForm() {
   const navigate = useNavigate();
@@ -13,7 +13,7 @@ export default function ItemForm() {
     description: "",
     img: "",
     availability: "",
-    phone: ""
+    phone: "",
   });
 
   async function handleSubmit(e) {
@@ -43,7 +43,9 @@ export default function ItemForm() {
         onSubmit={handleSubmit}
         className="flex p-8 flex-col gap-3 shadow rounded-sm md:min-w-[600px] items-start"
       >
-        <label className="block text-sm font-semibold leading-6 text-gray-900">Título do Anúncio:</label>
+        <label title="Digite aqui seu titulo" className="block text-sm font-semibold leading-6 text-gray-900">
+          Título do Anúncio:
+        </label>
         <input
           onChange={handleChange}
           className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -51,9 +53,11 @@ export default function ItemForm() {
           name="title"
           value={form.title}
         />
-       
+
         <div className="flex gap-3 text-sm font-semibold leading-6 text-gray-900">
-        <label className="block text-sm font-semibold leading-6 text-gray-900">Estado do Equipamento: </label>
+          <label className="block text-sm font-semibold leading-6 text-gray-900">
+            Estado do Equipamento:{" "}
+          </label>
           <input
             onChange={handleChange}
             className=""
@@ -62,7 +66,10 @@ export default function ItemForm() {
             value="Doação"
             checked={form.type === "Doação"}
           />
-          <label className="block text-sm font-semibold leading-6 text-gray-900" htmlFor="new">
+          <label
+            className="block text-sm font-semibold leading-6 text-gray-900"
+            htmlFor="new"
+          >
             Doação
           </label>
           <input
@@ -73,7 +80,10 @@ export default function ItemForm() {
             value="Empréstimo"
             checked={form.type === "Empréstimo"}
           />
-          <label className="block text-sm font-semibold leading-6 text-gray-900" htmlFor="new">
+          <label
+            className="block text-sm font-semibold leading-6 text-gray-900"
+            htmlFor="new"
+          >
             Empréstimo
           </label>
         </div>
@@ -102,7 +112,10 @@ export default function ItemForm() {
             value="Novo"
             checked={form.status === "Novo"}
           />
-          <label className="block text-sm font-semibold leading-6 text-gray-900" htmlFor="new">
+          <label
+            className="block text-sm font-semibold leading-6 text-gray-900"
+            htmlFor="new"
+          >
             Novo
           </label>
 
@@ -115,12 +128,17 @@ export default function ItemForm() {
             value="Usado"
             checked={form.status === "Usado"}
           />
-          <label className="block text-sm font-semibold leading-6 text-gray-900" htmlFor="used">
+          <label
+            className="block text-sm font-semibold leading-6 text-gray-900"
+            htmlFor="used"
+          >
             Usado
           </label>
         </div>
 
-        <label className="block text-sm font-semibold leading-6 text-gray-900">Descrição do Equipamento:</label>
+        <label className="block text-sm font-semibold leading-6 text-gray-900">
+          Descrição do Equipamento:
+        </label>
         <textarea
           onChange={handleChange}
           className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -129,7 +147,9 @@ export default function ItemForm() {
           name="description"
           value={form.description}
         />
-        <label className="block text-sm font-semibold leading-6 text-gray-900">Foto do Equipamento:</label>
+        <label className="block text-sm font-semibold leading-6 text-gray-900">
+          Foto do Equipamento:
+        </label>
         <input
           onChange={handleChange}
           className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -137,7 +157,9 @@ export default function ItemForm() {
           name="img"
           value={form.img}
         />
-        <label className="block text-sm font-semibold leading-6 text-gray-900">Telefone:</label>
+        <label className="block text-sm font-semibold leading-6 text-gray-900">
+          Telefone:
+        </label>
         <input
           onChange={handleChange}
           className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -146,7 +168,7 @@ export default function ItemForm() {
           value={form.phone}
         />
         <button
-          className="flex text-white bg-primary border-none hover:bg-blue-300 rounded-md p-2 shadow-md"
+          className="flex text-white bg-primary border-none hover:bg-sky-300 rounded-md p-2 shadow-md"
           type="submit"
         >
           Cadastrar

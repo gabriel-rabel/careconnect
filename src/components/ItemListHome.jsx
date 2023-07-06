@@ -38,7 +38,7 @@ export default function ItemListHome() {
                   {item.title.toUpperCase()}
                 </h3>
               </div>
-              <img className="p-1 rounded-t-lg" src={item.img} />
+              <img className="p-1 fontrounded-t-lg max-h-64" src={item.img} />
 
               <div>
                 <div className="flex items-center justify-between p-3">
@@ -48,7 +48,7 @@ export default function ItemListHome() {
                   <Link to={`/Detalhes/${item._id}`}>
                     <button
                       type="submit"
-                      className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-md text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                      className="text-white bg-sky-700 hover:bg-sky-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-md text-sm px-5 py-2.5 text-center dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-blue-800"
                     >
                       DETALHES
                     </button>
@@ -61,7 +61,7 @@ export default function ItemListHome() {
       <div className="flex justify-center m-4">
         <button
           onClick={handleShowItems}
-          className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-md text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          className="text-white bg-sky-700 hover:bg-sky-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-md text-sm px-5 py-2.5 text-center dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-blue-800"
         >
           VER MAIS RESULTADOS
         </button>
