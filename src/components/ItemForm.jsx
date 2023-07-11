@@ -38,7 +38,7 @@ export default function ItemForm() {
 
   return (
     <div className="flex flex-col mt-10 items-center">
-      <h1 className="flex text-3xl text-sky-700">Cadastro de equipamento</h1>
+      <h1 className="flex lg:text-3xl text-sky-700">Cadastro de equipamento</h1>
       <form
         onSubmit={handleSubmit}
         className="flex p-8 flex-col gap-3 shadow rounded-sm md:min-w-[600px] items-start"
@@ -51,16 +51,17 @@ export default function ItemForm() {
         </label>
         <input
           onChange={handleChange}
-          className="block w-full -mt-3 rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+          className="block w-full -mt-3 rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2  sm:text-sm sm:leading-6"
           type="text"
           name="title"
           value={form.title}
         />
 
-        <div className="flex gap-3 text-sm font-semibold leading-6 text-gray-900">
+        <div className="flex flex-col lg:flex-row gap-3 text-sm font-semibold leading-6 text-gray-900">
           <label className="block text-sm font-semibold leading-6 text-gray-900">
             Estado do Equipamento:{" "}
           </label>
+          <div className="flex gap-3">
           <input
             onChange={handleChange}
             className=""
@@ -69,6 +70,7 @@ export default function ItemForm() {
             value="Doação"
             checked={form.type === "Doação"}
           />
+          
           <label
             className="block text-sm font-semibold leading-6 text-gray-900 -ml-2"
             htmlFor="new"
@@ -89,6 +91,7 @@ export default function ItemForm() {
           >
             Empréstimo
           </label>
+        </div>
         </div>
 
         <div className="flex gap-3 text-sm font-semibold leading-6 text-gray-900">
@@ -145,18 +148,21 @@ export default function ItemForm() {
         </label>
         <textarea
           onChange={handleChange}
-          className="block w-full -mt-3 rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+          className="block w-full -mt-3 rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2  sm:text-sm sm:leading-6"
           rows="5"
           type="text"
           name="description"
           value={form.description}
         />
         <label className="block text-sm font-semibold leading-6 text-gray-900">
-          Foto do Equipamento:
-        </label>
+              Foto do Equipamento:{" "}
+              <span className="font-extralight text-gray-500">
+                (inserir link)
+              </span>
+            </label>
         <input
           onChange={handleChange}
-          className="block w-full -mt-3 rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+          className="block w-full -mt-3 rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2  sm:text-sm sm:leading-6"
           type="url"
           name="img"
           placeholder="https://..."
@@ -167,7 +173,7 @@ export default function ItemForm() {
         </label>
         <input
           onChange={handleChange}
-          className="block w-full -mt-3 rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+          className="block w-full -mt-3 rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 sm:text-sm sm:leading-6"
           type="phone"
           name="phone"
           value={form.phone}

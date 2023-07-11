@@ -118,26 +118,27 @@ export default function ItemDetailPage() {
       {/*Edit Item Form*/}
       {showForm === true && (
         <div className="flex flex-col items-center">
-          <h1 className="flex text-3xl">Edição de cadastro</h1>
+          <h1 className="flex lg:text-3xl text-sky-700">Edição de cadastro</h1>
           <form
             onSubmit={handleSubmit}
-            className="flex m-5 p-5 flex-col gap-3 shadow rounded-sm md:min-w-[600px] items-start"
+            className="flex p-8 flex-col gap-3 shadow rounded-sm md:min-w-[600px] items-start"
           >
             <label className="block text-sm font-semibold leading-6 text-gray-900">
               Título do Anúncio:
             </label>
             <input
               onChange={handleChange}
-              className="-mt-3 block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              className="block w-full -mt-3 rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2  sm:text-sm sm:leading-6"
               type="text"
               name="title"
               value={itemForm.title}
             />
 
-            <div className="flex gap-3">
+            <div className="flex flex-col lg:flex-row gap-3 text-sm font-semibold leading-6 text-gray-900">
               <label className="block text-sm font-semibold leading-6 text-gray-900">
-                Desejo disponibilizar como:{" "}
+              Estado do Equipamento:{" "}
               </label>
+              <div className="flex gap-3">
               <input
                 onChange={handleChange}
                 className=""
@@ -147,7 +148,7 @@ export default function ItemDetailPage() {
                 checked={itemForm.type === "Doação"}
               />
               <label
-                className="block text-sm font-semibold leading-6 text-gray-900"
+                className="block text-sm font-semibold leading-6 text-gray-900 -ml-2"
                 htmlFor="new"
               >
                 Doação
@@ -161,11 +162,12 @@ export default function ItemDetailPage() {
                 checked={itemForm.type === "Empréstimo"}
               />
               <label
-                className="block text-sm font-semibold leading-6 text-gray-900"
+                className="block text-sm font-semibold leading-6 text-gray-900 -ml-2"
                 htmlFor="new"
               >
                 Empréstimo
               </label>
+            </div>
             </div>
 
             <div className="flex gap-3 text-sm font-semibold leading-6 text-gray-900">
@@ -181,7 +183,8 @@ export default function ItemDetailPage() {
                 <option value="Andador">Andador</option>
                 <option value="Equipamento">Equipamento</option>
               </select>
-
+</div>
+<div className="flex gap-3">
               <input
                 onChange={handleChange}
                 className=""
@@ -192,7 +195,7 @@ export default function ItemDetailPage() {
                 checked={itemForm.status === "Novo"}
               />
               <label
-                className="block text-sm font-semibold leading-6 text-gray-900"
+                className="block text-sm font-semibold leading-6 text-gray-900 -ml-2"
                 htmlFor="new"
               >
                 Novo
@@ -208,7 +211,7 @@ export default function ItemDetailPage() {
                 checked={itemForm.status === "Usado"}
               />
               <label
-                className="block text-sm font-semibold leading-6 text-gray-900"
+                className="block text-sm font-semibold leading-6 text-gray-900 -ml-2"
                 htmlFor="used"
               >
                 Usado
@@ -220,7 +223,7 @@ export default function ItemDetailPage() {
             </label>
             <textarea
               onChange={handleChange}
-              className=" -mt-3 block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              className=" -mt-3 block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2  sm:text-sm sm:leading-6"
               rows="5"
               type="text"
               name="description"
@@ -234,7 +237,7 @@ export default function ItemDetailPage() {
             </label>
             <input
               onChange={handleChange}
-              className="-mt-3 block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              className="-mt-3 block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2  sm:text-sm sm:leading-6"
               type="url"
               name="img"
               value={itemForm.img}
@@ -244,7 +247,7 @@ export default function ItemDetailPage() {
             </label>
             <input
               onChange={handleChange}
-              className="-mt-3 block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              className="-mt-3 block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2  sm:text-sm sm:leading-6"
               type="phone"
               name="phone"
               value={itemForm.phone}
