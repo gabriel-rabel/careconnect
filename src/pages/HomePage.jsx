@@ -7,22 +7,22 @@ export default function HomePage() {
   return (
     <div>
       <section
-        className={`flex lg:flex-row flex-col mt-20 relative`}
+        className={`flex lg:flex-row flex-col mt-5 relative`}
         style={{
           backgroundImage: `url(${bg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <div className="flex items-center flex-col w-3/5 gap-10 ml-6">
+        <div className="flex items-center flex-col lg:w-3/5 gap-10 m-6">
           <div className="flex lg:justify-start">
-            <h1 className="text-center text-6xl lg:text-left font-bold">
+            <h1 className="text-center text-4xl lg:text-6xl lg:text-left font-bold">
               Promovemos solidariedade na área da{" "}
               <span className="text-sky-700">Saúde</span>
             </h1>
           </div>
-          <div className="flex flex-col  gap-3 ">
-            <p className="flex text-center lg:text-left text-gray-600">
+          <div className="flex flex-col  lg:gap-3 ">
+            <p className="flex text-justify lg:text-left text-gray-600">
               Através de um simples cadastro, você pode disponibilizar para
               empréstimo ou doação aqueles equipamentos de saúde que você não
               utiliza mais, ajudando assim as pessoas que necessitam de auxílio
@@ -31,7 +31,7 @@ export default function HomePage() {
               Além da possibilidade de compartilhar seus equipamentos, também
               oferecemos a oportunidade de doar um pouco do seu tempo para
               ajudar aqueles que mais precisam. <br />
-              <br />
+
               Seja acompanhando alguém em uma consulta, oferecendo suporte
               emocional ou prestando auxílio em atividades diárias, cada pequeno
               gesto faz a diferença. Buscamos criar uma rede de apoio
@@ -55,7 +55,7 @@ export default function HomePage() {
         </div>
       </section>
       <section>
-        <div className="lg:p-4">
+        <div className="lg:p-6">
           <h4 className="text-sky-700 font-bold ">Somos muitos</h4>
           <h2 className="font-bold text-gray-600 text-4xl">Em números</h2>
         </div>
@@ -101,7 +101,7 @@ export default function HomePage() {
             </div>
 
             <div className="flex flex-col w-2/4 justify-center gap-4">
-              <p className="font-extralight items-center text-2xl">
+              <p className="font-extralight items-center lg:text-2xl">
                 "Ao compartilhar o que temos, podemos aliviar o sofrimento de
                 pessoas lutando contra doenças, idosos e indivíduos em
                 recuperação. Cada pequeno gesto de bondade importa e o impacto
