@@ -81,22 +81,22 @@ export default function NavBar() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className=" flex flex-col gap-4 space-y-2 py-6">
-                <Link to="/" className="customLink hover:text-blue-500">
+                <Link to="/" className="customLink hover:text-blue-500" onClick={() => setMobileMenuOpen(false)}>
                   Home
                 </Link>{" "}
                 <Link
                   to="/QueroAjudar"
-                  className="customLink hover:text-blue-500"
+                  className="customLink hover:text-blue-500" onClick={() => setMobileMenuOpen(false)}
                 >
                   Quero Ajudar
                 </Link>{" "}
                 <Link
                   to="/PrecisoDeAjuda"
-                  className="customLink hover:text-blue-500"
+                  className="customLink hover:text-blue-500" onClick={() => setMobileMenuOpen(false)}
                 >
                   Preciso de Ajuda
                 </Link>{" "}
-                <Link to="/Contato" className="customLink hover:text-blue-500">
+                <Link to="/Contato" className="customLink hover:text-blue-500" onClick={() => setMobileMenuOpen(false)}>
                   Contato
                 </Link>{" "}
               </div>
