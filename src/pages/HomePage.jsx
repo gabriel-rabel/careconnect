@@ -7,22 +7,22 @@ export default function HomePage() {
   return (
     <div>
       <section
-        className={`flex md:flex-row flex-col mt-20 relative`}
+        className={`flex lg:flex-row flex-col mt-20 relative`}
         style={{
           backgroundImage: `url(${bg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <div className="flex flex-col w-3/5 gap-10 ml-6">
-          <div className="flex justify-start">
-            <h1 className="text-6xl text-left font-bold">
+        <div className="flex items-center flex-col w-3/5 gap-10 ml-6">
+          <div className="flex lg:justify-start">
+            <h1 className="text-center text-6xl lg:text-left font-bold">
               Promovemos solidariedade na área da{" "}
-              <span className="text-blue-700">Saúde</span>
+              <span className="text-sky-700">Saúde</span>
             </h1>
           </div>
           <div className="flex flex-col  gap-3 ">
-            <p className="flex text-left text-gray-600">
+            <p className="flex text-center lg:text-left text-gray-600">
               Através de um simples cadastro, você pode disponibilizar para
               empréstimo ou doação aqueles equipamentos de saúde que você não
               utiliza mais, ajudando assim as pessoas que necessitam de auxílio
@@ -42,12 +42,12 @@ export default function HomePage() {
           <div className="flex p-8 align-top"></div>
         </div>
         <div className="flex w-2/5">
-          <img className="hidden md:block" src={doctorImg} />
+          <img className="hidden lg:block" src={doctorImg} />
         </div>
       </section>
       <section>
         <div className="md:p-10">
-          <h4 className="text-blue-700 font-bold ">Equipamentos em</h4>
+          <h4 className="text-sky-700 font-bold ">Equipamentos em</h4>
           <h2 className="font-bold text-gray-600 text-4xl">Destaque</h2>
         </div>
         <div className="m-3 p-3">
@@ -55,8 +55,8 @@ export default function HomePage() {
         </div>
       </section>
       <section>
-        <div className="md:p-10">
-          <h4 className="text-blue-700 font-bold ">Somos muitos</h4>
+        <div className="lg:p-4">
+          <h4 className="text-sky-700 font-bold ">Somos muitos</h4>
           <h2 className="font-bold text-gray-600 text-4xl">Em números</h2>
         </div>
         <div className="grid justify-center md:grid-cols-3 gap-5 md:mx-20">
@@ -95,13 +95,13 @@ export default function HomePage() {
           <h5 className="font-thin text-sm">
             O pouco que temos, podemos oferecer...
           </h5>
-          <div className="flex flex-col justify-center md:flex-row">
-            <div className="flex w-2/5">
-              <img className="" src={menImg} />
+          <div className="flex flex-col justify-center items-center md:flex-row">
+            <div className="flex w-2/5 items-center justify-center">
+              <img className="min-w-[300px]" src={menImg} />
             </div>
 
             <div className="flex flex-col w-2/4 justify-center gap-4">
-              <p className="font-extralight text-2xl">
+              <p className="font-extralight items-center text-2xl">
                 "Ao compartilhar o que temos, podemos aliviar o sofrimento de
                 pessoas lutando contra doenças, idosos e indivíduos em
                 recuperação. Cada pequeno gesto de bondade importa e o impacto

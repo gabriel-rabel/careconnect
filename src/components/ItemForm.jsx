@@ -37,18 +37,21 @@ export default function ItemForm() {
   }
 
   return (
-    <div className="flex flex-col items-center">
-      <h1 className="flex text-3xl">CADASTRO DE EQUIPAMENTO</h1>
+    <div className="flex flex-col mt-10 items-center">
+      <h1 className="flex text-3xl text-sky-700">Cadastro de equipamento</h1>
       <form
         onSubmit={handleSubmit}
         className="flex p-8 flex-col gap-3 shadow rounded-sm md:min-w-[600px] items-start"
       >
-        <label title="Digite aqui seu titulo" className="block text-sm font-semibold leading-6 text-gray-900">
+        <label
+          title="Digite aqui seu titulo"
+          className="block text-sm font-semibold leading-6 text-gray-900"
+        >
           Título do Anúncio:
         </label>
         <input
           onChange={handleChange}
-          className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+          className="block w-full -mt-3 rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
           type="text"
           name="title"
           value={form.title}
@@ -67,7 +70,7 @@ export default function ItemForm() {
             checked={form.type === "Doação"}
           />
           <label
-            className="block text-sm font-semibold leading-6 text-gray-900"
+            className="block text-sm font-semibold leading-6 text-gray-900 -ml-2"
             htmlFor="new"
           >
             Doação
@@ -81,7 +84,7 @@ export default function ItemForm() {
             checked={form.type === "Empréstimo"}
           />
           <label
-            className="block text-sm font-semibold leading-6 text-gray-900"
+            className="block text-sm font-semibold leading-6 text-gray-900 -ml-2"
             htmlFor="new"
           >
             Empréstimo
@@ -102,6 +105,7 @@ export default function ItemForm() {
             <option value="Equipamento">Equipamento</option>
           </select>
         </div>
+
         <div className="flex gap-3">
           <input
             onChange={handleChange}
@@ -113,7 +117,7 @@ export default function ItemForm() {
             checked={form.status === "Novo"}
           />
           <label
-            className="block text-sm font-semibold leading-6 text-gray-900"
+            className="block text-sm font-semibold leading-6 text-gray-900 -ml-2"
             htmlFor="new"
           >
             Novo
@@ -129,7 +133,7 @@ export default function ItemForm() {
             checked={form.status === "Usado"}
           />
           <label
-            className="block text-sm font-semibold leading-6 text-gray-900"
+            className="block text-sm font-semibold leading-6 text-gray-900 -ml-2"
             htmlFor="used"
           >
             Usado
@@ -141,7 +145,7 @@ export default function ItemForm() {
         </label>
         <textarea
           onChange={handleChange}
-          className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+          className="block w-full -mt-3 rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
           rows="5"
           type="text"
           name="description"
@@ -152,9 +156,10 @@ export default function ItemForm() {
         </label>
         <input
           onChange={handleChange}
-          className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+          className="block w-full -mt-3 rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
           type="url"
           name="img"
+          placeholder="https://..."
           value={form.img}
         />
         <label className="block text-sm font-semibold leading-6 text-gray-900">
@@ -162,13 +167,15 @@ export default function ItemForm() {
         </label>
         <input
           onChange={handleChange}
-          className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+          className="block w-full -mt-3 rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
           type="phone"
           name="phone"
           value={form.phone}
+          placeholder="(00) 00000-0000" 
+          required
         />
         <button
-          className="flex text-white bg-primary border-none hover:bg-sky-300 rounded-md p-2 shadow-md"
+          className="flex text-white bg-sky-700 border-none hover:bg-sky-500 rounded-md p-2 shadow-md"
           type="submit"
         >
           Cadastrar

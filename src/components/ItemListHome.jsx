@@ -26,11 +26,11 @@ export default function ItemListHome() {
 
   return (
     <div className="flex flex-col">
-      <div className="grid justify-center md:grid-cols-5 gap-4 md:-mt-4">
+      <div className="grid justify-center md:grid-cols-5 gap-4 lg:-mt-4">
         {loaded &&
           items.map((item) => (
             <div
-              className="w-full max-w-sm rounded-b-lg shadow border-t-4 border-blue-600"
+              className="flex flex-col justify-between items-center w-full max-w-sm rounded-b-lg shadow border-t-4 border-blue-600"
               key={item._id}
             >
               <div className="px-5 pb-5">
@@ -41,16 +41,16 @@ export default function ItemListHome() {
               <img className="p-1 fontrounded-t-lg max-h-64" src={item.img} />
 
               <div>
-                <div className="flex items-center justify-between p-3">
+                <div className="flex items-center gap-5 p-3">
                   <span className="font-bold text-green-500 dark:text-white">
                     {item.status.toUpperCase()}
                   </span>
                   <Link to={`/Detalhes/${item._id}`}>
                     <button
                       type="submit"
-                      className="text-white bg-sky-700 hover:bg-sky-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-md text-sm px-5 py-2.5 text-center dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-blue-800"
+                      className="text-white bg-sky-700 hover:bg-sky-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-md text-sm px-5 py-2.5 text-center dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-blue-800"
                     >
-                      DETALHES
+                      Detalhes
                     </button>
                   </Link>
                 </div>
@@ -61,9 +61,9 @@ export default function ItemListHome() {
       <div className="flex justify-center m-4">
         <button
           onClick={handleShowItems}
-          className="text-white bg-sky-700 hover:bg-sky-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-md text-sm px-5 py-2.5 text-center dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-blue-800"
+          className="text-white bg-sky-700 hover:bg-sky-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-md text-sm px-5 py-2.5 text-center dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-blue-800"
         >
-          VER MAIS RESULTADOS
+          Ver mais resultados
         </button>
       </div>
     </div>

@@ -87,34 +87,35 @@ export default function ItemDetailPage() {
   // <-- edit item
 
   return (
-    <div>
-      {/*Detalhes do Item*/}
+    <div className="flex flex-col justify-between items-center">
+      {/*Items detail*/}
 
       <div
         onClick={() => setShowForm(!showForm)}
         className="flex w-full justify-end p-6 gap-3 items-end"
       >
         <button>
-          <PencilSquareIcon className="h-6 w-6" title="Editar" />
+          <PencilSquareIcon className="h-6 w-6 text-sky-700" title="Editar" />
         </button>
 
         <button onClick={handleDelete}>
-          <TrashIcon className="h-6 w-6" title="Deletar" />
+          <TrashIcon className="h-6 w-6 text-sky-700" title="Deletar" />
         </button>
       </div>
-      <div className="flex flex-col gap-4 p-6 items-center rounded-sm">
-        <h1>{item.title}</h1>
-        <img className="border max-w-[400px]" src={item.img} />
+      <div className="flex flex-col max-w-lg gap-4 p-6 items-center rounded-sm">
+        <h1 className="text-sky-700">{item.title}</h1>
+        <img className="rounded shadow max-w-[400px]" src={item.img} />
         <p>{item.description}</p>
+        <p>Tipo: {item.service_type}</p>
         <p>
-          Tipo: {item.type} - {item.status}
+        Disponíevel para: {item.type} 
         </p>
-        <p>Disponíevel para: {item.service_type}</p>
+        <p>Estado: {item.status}</p>
         <p>Telefone para contato: {item.phone}</p>
         <p>{item.service}</p>
       </div>
 
-      {/*Formulario de edição do Item*/}
+      {/*Edit Item Form*/}
       {showForm === true && (
         <div className="flex flex-col items-center">
           <h1 className="flex text-3xl">Edição de cadastro</h1>
@@ -249,7 +250,7 @@ export default function ItemDetailPage() {
               value={itemForm.phone}
             />
             <button
-              className="flex text-white bg-primary border-none hover:bg-sky-300 rounded-md p-2 shadow-md"
+              className="flex text-white bg-sky-700 border-none hover:bg-sky-300 rounded-md p-2 shadow-md"
               type="submit"
             >
               Salvar
