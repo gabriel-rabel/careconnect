@@ -34,7 +34,7 @@ export default function ItemListHome() {
               key={item._id}
             >
               <div className="px-5 pb-5">
-                <h3 className="text-normal font-bold tracking-tight text-gray-700 dark:text-white mt-3">
+                <h3 className="text-sky-700 font-bold tracking-tight mt-3">
                   {item.title.toUpperCase()}
                 </h3>
               </div>
@@ -42,7 +42,7 @@ export default function ItemListHome() {
 
               <div>
                 <div className="flex items-center gap-5 p-3">
-                  <span className="font-bold text-green-500 dark:text-white">
+                  <span className="font-bold text-green-500">
                     {item.status.toUpperCase()}
                   </span>
                   <Link to={`/Detalhes/${item._id}`}>
