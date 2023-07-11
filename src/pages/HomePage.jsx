@@ -21,7 +21,7 @@ export default function HomePage() {
               <span className="text-sky-700">Saúde</span>
             </h1>
           </div>
-          <div className="flex flex-col  lg:gap-3 ">
+          <div className="flex flex-row lg:flex-col  lg:gap-3 ">
             <p className="flex text-justify lg:text-left text-gray-600">
               Através de um simples cadastro, você pode disponibilizar para
               empréstimo ou doação aqueles equipamentos de saúde que você não
