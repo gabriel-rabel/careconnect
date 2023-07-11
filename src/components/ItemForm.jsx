@@ -175,7 +175,7 @@ export default function ItemForm() {
           required
         />
         <button
-          className="flex text-white bg-sky-700 border-none hover:bg-sky-500 rounded-md p-2 shadow-md"
+          className="flex w-full justify-center text-white bg-sky-700 border-none hover:bg-sky-500 rounded-md p-2 shadow-md"
           type="submit"
         >
           Cadastrar
