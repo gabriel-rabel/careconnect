@@ -28,3 +28,5 @@ O TrocaSaúde é um software de código aberto licenciado sob a MIT License.
 @npm tailwindcss
 
 Gabriel Rabel https://www.linkedin.com/in/gabrielrabel/
+
+Slide de apresentação do projeto https://gamma.app/public/CareConnect-Um-Projeto-React-HTML-e-Javascript-gzua0iazvrfwr8s
