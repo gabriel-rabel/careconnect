@@ -24,7 +24,6 @@ Este projeto é um software de código aberto licenciado sob a MIT License.
 - (@react-hot-toast)
 - (@react-router-dom)
 - (@axios)
-- (@route)
 - (@npm tailwindcss)
 
 [Linkedin: Gabriel Rabel](https://www.linkedin.com/in/gabrielrabel/)
