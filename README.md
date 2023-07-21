@@ -11,21 +11,21 @@ Busca de Itens: Através da busca na plataforma, os usuários podem encontrar os
 
 Solicitação de Empréstimo: Os usuários interessados em um item específico podem enviar uma solicitação de empréstimo para o proprietário, fornecendo detalhes sobre o período desejado e a finalidade do empréstimo.
 
-#Contribuindo
+## Contribuindo
 Se você deseja contribuir para o desenvolvimento do CareConnect, sinta-se à vontade para abrir issues, enviar pull requests ou fornecer sugestões. Juntos, podemos ampliar o alcance desse projeto e impactar positivamente a vida de muitas pessoas.
 
-#Licença
+## Licença
 O TrocaSaúde é um software de código aberto licenciado sob a MIT License.
 
-#Bibliotecas
+## Bibliotecas
 
-@heroicons/react 
-@headlessui/react  
-@react-hot-toast
-@react-router-dom
-@axios
-@route
-@npm tailwindcss
+- (@heroicons/react)
+- (@headlessui/react)
+- (@react-hot-toast)
+- (@react-router-dom)
+- (@axios)
+- (@route)
+- (@npm tailwindcss)
 
 Gabriel Rabel https://www.linkedin.com/in/gabrielrabel/
 
