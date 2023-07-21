@@ -17,6 +17,10 @@ Se você deseja contribuir para o desenvolvimento do CareConnect, sinta-se à vo
 ## Licença
 Este projeto é um software de código aberto licenciado sob a MIT License.
 
+## Framework
+- (React)
+- (Express)
+- 
 ## Bibliotecas
 
 - (@heroicons)
