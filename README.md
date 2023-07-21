@@ -19,8 +19,8 @@ Este projeto é um software de código aberto licenciado sob a MIT License.
 
 ## Bibliotecas
 
-- (@heroicons/react)
-- (@headlessui/react)
+- (@heroicons)
+- (@headlessui)
 - (@react-hot-toast)
 - (@react-router-dom)
 - (@axios)
