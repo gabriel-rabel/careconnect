@@ -30,7 +30,7 @@ Este projeto é um software de código aberto licenciado sob a MIT License.
 
 - (@Express)
 - (@MongoDB)
-Deploy Cyclic
+- (@Cyclic)
 
 [Linkedin: Gabriel Rabel](https://www.linkedin.com/in/gabrielrabel/)
 
