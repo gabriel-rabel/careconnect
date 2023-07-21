@@ -15,7 +15,7 @@ O objetivo principal do **CareConnect** é facilitar o acesso a equipamentos de 
 Se você deseja contribuir para o desenvolvimento do CareConnect, sinta-se à vontade para abrir issues, enviar pull requests ou fornecer sugestões. Juntos, podemos ampliar o alcance desse projeto e impactar positivamente a vida de muitas pessoas.
 
 ## Licença
-O TrocaSaúde é um software de código aberto licenciado sob a MIT License.
+Este projeto é um software de código aberto licenciado sob a MIT License.
 
 ## Bibliotecas
 
