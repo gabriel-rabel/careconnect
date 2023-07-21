@@ -26,6 +26,12 @@ Este projeto é um software de código aberto licenciado sob a MIT License.
 - (@axios)
 - (@npm tailwindcss)
 
+## Em implantação
+
+- (@Express)
+- (@MongoDB)
+Deploy Cyclic
+
 [Linkedin: Gabriel Rabel](https://www.linkedin.com/in/gabrielrabel/)
 
 
