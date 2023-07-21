@@ -31,10 +31,10 @@ Este projeto é um software de código aberto licenciado sob a MIT License.
 - (@npm tailwindcss)
 
 ## Em implantação
-
-- (@Express)
-- (@MongoDB)
-- (@Cyclic)
+- (Admin / User área)
+  - (@Express)
+  - (@MongoDB)
+  - (@Cyclic)
 
 [Linkedin: Gabriel Rabel](https://www.linkedin.com/in/gabrielrabel/)
 
